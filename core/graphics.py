@@ -4,6 +4,7 @@ from pygame.locals import *
 screen = None
 font = None
 
+# Initiates pygame (also font), starts up and returns screen
 def start(scr_width, scr_height):
     global screen
     global font
@@ -17,15 +18,18 @@ def start(scr_width, scr_height):
         
         return screen
     
+# Renders and returns colored text
 def render_text(text, color):
     global font
     rend_text = font.render(text, True, color)
     return rend_text
-    
+
+# Draws text at the given position
 def draw_text(text, position):
     global screen
     screen.blit(text, position)
-    
+
+# Returns color in (R, G, B) format by its name
 def get_color(name):
     colors = {
         'bg': (5, 26, 56),
