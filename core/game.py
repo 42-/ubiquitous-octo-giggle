@@ -24,6 +24,7 @@ class Game(object):
         
         while running:
             self.clock.tick(FPS)
+            
             self.screen.fill(self.bg_color)
             
             for y in range(self.map_height):
